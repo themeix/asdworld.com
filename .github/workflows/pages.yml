@@ -29,10 +29,11 @@ jobs:
           bundler-cache: true
 
       - name: Setup Pages configuration
+        id: pages
         uses: actions/configure-pages@v5
 
       - name: Build Jekyll Site
-        run: bundle exec jekyll build --baseurl "/asdworld.com"
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 
