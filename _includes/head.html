@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>{% if page.title %}{{ page.title }} – {{ site.data.settings.title }}{% else %}{{ site.data.settings.title }} – {{ site.data.settings.tagline }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: page.content | default: site.data.settings.description | strip_html | truncatewords: 30 }}">
+
+  <!-- Google Fonts: Lato, Montserrat, Itim -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ '/assets/uploads/2018/08/icon-21x16-bbc-white.png' | relative_url }}">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
+  <!-- LLMs.txt Discovery -->
+  <link rel="alternate" type="text/plain" href="{{ '/llms.txt' | absolute_url }}" title="LLMs.txt" />
+  <link rel="alternate" type="text/plain" href="{{ '/llms-full.txt' | absolute_url }}" title="LLMs-full.txt" />
+
+  <!-- Canonical & Feeds -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.data.settings.title }}" href="{{ '/feed.xml' | relative_url }}">
+</head>

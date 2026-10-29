@@ -1,0 +1,26 @@
+# ASD World
+> Helping Parents Help Kids: Musings, IEP guidance, special education legal strategy, and autism family resources by Rick Colosimo.
+
+ASD World provides comprehensive perspectives, guidance, and actionable insights on autism spectrum disorder (ASD), IEP meetings, special education strategy, employment models for adults on the spectrum, and insurance considerations.
+
+## Core Pages
+- [Home]({{ '/ ' | absolute_url }}): Recent articles, blog posts, and educational guides.
+- [ASD Insurance]({{ '/asd-insurance/' | absolute_url }}): Autism health insurance considerations and parent sharing.
+- [Consultations]({{ '/consultations/' | absolute_url }}): Advisory consultations and direct help for families.
+- [Services & IEP Guidance]({{ '/services-2/' | absolute_url }}): IEP preparation, strategy, and advocacy.
+- [I need IEP help!]({{ '/services-2/i-need-iep-help/' | absolute_url }}): Targeted assistance for parents navigating the IEP process.
+- [Disclosures]({{ '/services-2/disclosures/' | absolute_url }}): Important legal and consultation disclosures.
+- [About Rick Colosimo]({{ '/about-rick-colosimo/' | absolute_url }}): Background of Rick Colosimo, attorney, veteran, and parent advocate.
+- [My Approach]({{ '/about-rick-colosimo/my-approach/' | absolute_url }}): Philosophy and practical approach to advocacy.
+- [FAQ & Fees]({{ '/faq/' | absolute_url }}): Frequently asked questions and advisory fee structure.
+- [Contact]({{ '/contact-rick/' | absolute_url }}): Direct contact information and communication channels.
+
+## Key Articles & Topics
+- [When should you separate businesses?]({{ '/when-should-you-separate-businesses/' | absolute_url }})
+- [Placebo effect and autism]({{ '/placebo-effect-and-autism/' | absolute_url }})
+- [What does creating employment for ASD adults look like?]({{ '/what-does-creating-employment-for-asd-adults-look-like/' | absolute_url }})
+- [Six Flags NJ – bring a doctor note]({{ '/six-flags-nj-bring-a-doctor-note/' | absolute_url }})
+- [Non-jobs for people with autism]({{ '/non-jobs-for-people-with-autism/' | absolute_url }})
+
+## Full Context
+- Detailed content and comprehensive archive: [llms-full.txt]({{ '/llms-full.txt' | absolute_url }})

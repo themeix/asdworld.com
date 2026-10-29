@@ -1,0 +1,36 @@
+- title: "Home"
+  url: "/"
+
+- title: "ASD Insurance"
+  url: "/asd-insurance/"
+  children:
+    - title: "Thanks"
+      url: "/asd-insurance/thanks/"
+    - title: "Share Your Insurance"
+      url: "/asd-insurance/share-your-insurance/"
+
+- title: "Consultations"
+  url: "/consultations/"
+
+- title: "Services"
+  url: "/services-2/"
+  children:
+    - title: "I need IEP help!"
+      url: "/services-2/i-need-iep-help/"
+    - title: "Disclosures"
+      url: "/services-2/disclosures/"
+
+- title: "About"
+  url: "/about-rick-colosimo/"
+  children:
+    - title: "My Approach"
+      url: "/about-rick-colosimo/my-approach/"
+
+- title: "FAQ"
+  url: "/faq/"
+  children:
+    - title: "Fees"
+      url: "/faq/fees/"
+
+- title: "Contact"
+  url: "/contact-rick/"

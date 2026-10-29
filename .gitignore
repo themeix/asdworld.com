@@ -1,0 +1,9 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
+_wp_data/
+fetch_asdworld.py
+convert_asdworld.py
+.DS_Store

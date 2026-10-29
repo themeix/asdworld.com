@@ -1,0 +1,99 @@
+---
+layout: default
+title: "Search Results"
+permalink: /search/
+---
+<div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+    
+    <div class="lg:col-span-9 lg:pr-8 lg:border-r lg:border-dotted lg:border-[#cccccc] min-w-0">
+      <h1 class="font-sans font-bold text-3xl text-[#333333] mb-6">
+        Search ASD World
+      </h1>
+
+      <div class="mb-8">
+        <input type="search" id="live-search-input" placeholder="Type here to search posts, topics, IEP advice..." class="w-full px-5 py-3.5 bg-white border-2 border-gray-300 text-gray-800 text-base focus:border-[#29aa6f] focus:outline-none transition-colors" />
+        <p id="search-status" class="mt-2 text-sm text-gray-500"></p>
+      </div>
+
+      <div id="search-results" class="space-y-8">
+        <!-- Live search results injected here -->
+      </div>
+    </div>
+
+    <div class="lg:col-span-3 min-w-0">
+      {% include sidebar.html %}
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var searchInput = document.getElementById('live-search-input');
+    var searchStatus = document.getElementById('search-status');
+    var searchResults = document.getElementById('search-results');
+    var postsData = [];
+
+    // Parse URL param
+    var params = new URLSearchParams(window.location.search);
+    var initialQuery = params.get('q') || '';
+    if (initialQuery) {
+      searchInput.value = initialQuery;
+    }
+
+    // Fetch search index
+    fetch('{{ "/search.json" | relative_url }}')
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        postsData = data;
+        if (initialQuery) {
+          performSearch(initialQuery);
+        }
+      })
+      .catch(function(err) {
+        searchStatus.innerText = 'Unable to load search index.';
+      });
+
+    searchInput.addEventListener('input', function() {
+      performSearch(searchInput.value);
+    });
+
+    function performSearch(query) {
+      query = (query || '').trim().toLowerCase();
+      if (!query) {
+        searchResults.innerHTML = '';
+        searchStatus.innerText = '';
+        return;
+      }
+
+      var filtered = postsData.filter(function(post) {
+        var matchTitle = (post.title || '').toLowerCase().includes(query);
+        var matchExcerpt = (post.excerpt || '').toLowerCase().includes(query);
+        var matchTags = (post.tags || []).some(function(t) { return (t || '').toLowerCase().includes(query); });
+        return matchTitle || matchExcerpt || matchTags;
+      });
+
+      searchStatus.innerText = 'Found ' + filtered.length + ' match' + (filtered.length === 1 ? '' : 'es') + ' for "' + query + '"';
+
+      if (filtered.length === 0) {
+        searchResults.innerHTML = '<p class="text-gray-500 text-base">No matching articles found. Try another search term.</p>';
+        return;
+      }
+
+      var html = '';
+      filtered.forEach(function(post) {
+        html += '<article class="pb-6 border-b border-dotted border-[#cccccc]">';
+        html += '  <h2 class="font-sans font-bold text-2xl text-[#333333] hover:text-[#29aa6f] leading-snug mb-2">';
+        html += '    <a href="' + post.url + '">' + post.title + '</a>';
+        html += '  </h2>';
+        html += '  <div class="text-xs text-gray-500 mb-2 font-sans">' + post.date + '</div>';
+        html += '  <div class="text-base text-[#424242] leading-relaxed mb-3 font-sans">' + post.excerpt + '</div>';
+        html += '  <div class="text-right"><a href="' + post.url + '" class="post-read-more-link">Read More</a></div>';
+        html += '</article>';
+      });
+
+      searchResults.innerHTML = html;
+    }
+  });
+</script>

@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Scientist drawing line on vaccine research"
+date: 2009-07-01T10:36:22
+slug: scientist-drawing-line-on-vaccine-research
+permalink: /scientist-drawing-line-on-vaccine-research/
+author: "Rick Colosimo"
+categories:
+  - "Uncategorized"
+tags:
+  - "explaining"
+  - "public health"
+  - "research"
+  - "science"
+excerpt: "Today, Dr. Eric London, from Autism Speaks/Autism Science Foundation and a co-founder of NAAR (which merged with Autism Speaks), announced that he is resigning from the Scientific Affairs Committee and dissociating himself from Autism Speaks. His statement generally refers to the continuation of vaccine-related research supported by Autism Speaks. This issue is one that is…"
+---
+
+<p>Today, <a href="https://www.autismsciencefoundation.org/ericlondon.html">Dr. Eric London</a>, from <a href="https://www.autismspeaks.org/">Autism Speaks</a>/<a href="https://www.autismsciencefoundation.org/">Autism Science Foundation</a> and a co-founder of NAAR (which merged with Autism Speaks), <a href="https://autismsciencefoundation.wordpress.com/2009/06/30/naar-founder-eric-london-resigns-from-autism-speaks-citing-disagreement-over-autismvaccine-research/">announced</a> that he is resigning from the Scientific Affairs Committee and dissociating himself from Autism Speaks.</p>
+<p>His statement generally refers to the continuation of vaccine-related research supported by Autism Speaks. This issue is one that is straightforward for scientists, complicated for lawyers, and almost non-sensical to the public. Essentially, we use epidemiology and other research to establish that two factors are correlated, meaning that they occur together more often than chance alone would predict, or that they are not correlated, which means that either they don&#8217;t co-occur more often than chance would predict or that they actually occur together less often than chance would predict. Science is always tentative; it recognizes, explicitly, the nature and quality of the proof that supports its assertions.</p>
+<p>Relating this concept to vaccines, the reliable peer-reviewed reported research (<a href="https://www.autismsciencefoundation.org/autismandvaccines.html">detailed</a> in <a href="https://www.gov.uk/government/organisations/department-of-health.atom">many</a> <a href="https://www.cdc.gov/vaccinesafety/updates/">places</a> for those who are interested) does not support the conclusion that autism occurs with any greater frequency in, e.g., children who get the MMR vaccine than for children who don&#8217;t. We understand this to mean, from a technical perspective, that since the likelihood isn&#8217;t great that the two are related, the matter is essentially unfruitful for further research. This is not to say, however, that the two are categorically, capital-T &#8220;Truly&#8221; exclusive. No legitimate scientist will ever say that when speaking explicitly about this technical question; it is possible, in the sense of merely not being impossible, that experimental error has crept into every single experiment that was conducted, reviewed, or repeated. The likelihood of that possibility is smaller, however, than we can imagine. This isn&#8217;t a 10% or 20% chance of a mistake: it&#8217;s not even a 1% chance.</p>
+<p>But trying to explain this technical question of proof is difficult, and so when someone uses the phrase &#8220;biological plausibility,&#8221; it&#8217;s bound to be misinterpreted and over-emphasized. And without the full story, giving anyone the impression that vaccines might cause autism is doing the public a disservice. We might as well tell people that they should spend the rent money on lottery tickets because there&#8217;s a mathematical plausibility that they will win. I don&#8217;t know which is a better bet, losing your house for the lottery or risking measles to avoid autism, but I know that folks shouldn&#8217;t be making either one.</p>
+<p>As astute readers will remember, this issue&#8217;s persistent support at Autism Speaks was related to the <a href="https://www.newsweek.com/more-turmoil-over-vaccines-and-autism-77837">departure</a> of Alison Singer and the formation of the ASF. Strong beliefs about vaccines have caused <a href="https://myaccount.nytimes.com/auth/login?URI=www-nc.nytimes.com/2007/06/18/health/18iht-autism.1.6184479.html&amp;REFUSE_COOKIE_ERROR=SHOW_ERROR">other troubles</a> there as well.</p>

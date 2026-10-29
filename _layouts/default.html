@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body class="min-h-screen text-[#424242] antialiased">
+  <div id="top"></div>
+  
+  <!-- Centered Boxed White Container with Soft Shadow -->
+  <div class="max-w-[1300px] mx-auto bg-white shadow-[0_0_20px_rgba(0,0,0,0.08)] min-h-screen flex flex-col justify-between">
+    <div>
+      {% include header.html %}
+      <main id="main-content" role="main">
+        {{ content }}
+      </main>
+    </div>
+    {% include footer.html %}
+  </div>
+
+</body>
+</html>

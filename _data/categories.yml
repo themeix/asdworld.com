@@ -1,0 +1,9 @@
+- name: "Events"
+  slug: "events"
+  count: 15
+- name: "Science Corner"
+  slug: "science-corner"
+  count: 4
+- name: "Uncategorized"
+  slug: "uncategorized"
+  count: 75

@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+    color: #424242;
+    background: linear-gradient(180deg, #ffffff 25%, #6f97d8 100%);
+    min-height: 100vh;
+  }
+  
+  body {
+    background: transparent;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #424242;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #424242;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+  }
+
+  a:hover {
+    color: #29aa6f;
+  }
+}
+
+/* Subtitle "Helping Parents Help Kids" in playful Itim cursive font */
+.site-subtitle {
+  font-family: 'Itim', cursive, sans-serif;
+  color: #3e7ada;
+  font-size: 40px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .site-subtitle {
+    font-size: 46px;
+  }
+}
+
+/* Top Nav styling */
+.nav-menu-link {
+  display: block;
+  padding: 10px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #595959;
+  transition: all 0.15s ease-in-out;
+}
+
+.nav-menu-link:hover {
+  color: #29aa6f;
+}
+
+.nav-menu-link.active {
+  background-color: #29aa6f;
+  color: #ffffff !important;
+}
+
+/* Post feed button styles matching original Beaver Builder */
+.post-read-more-link {
+  display: inline-block;
+  color: #29aa6f;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.15s ease-in-out;
+}
+
+.post-read-more-link:hover {
+  color: #d49657;
+  text-decoration: underline;
+}
+
+/* Footer 4-card read more button with improved design and centered alignment */
+.card-read-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  height: 48px;
+  padding: 0 16px;
+  background-color: #29aa6f;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-read-more-btn:hover {
+  background-color: #d49657;
+  color: #ffffff !important;
+}
+
+.card-read-more-btn .card-btn-arrow {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-read-more-btn:hover .card-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Sidebar All Blog Posts button */
+.sidebar-all-posts-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #29aa6f;
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.sidebar-all-posts-btn:hover {
+  background-color: #d49657;
+  color: #ffffff !important;
+}
+
+/* Back to top fixed button */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 2em;
+  right: 0;
+  z-index: 50;
+  background: #29aa6f;
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.75em 1.25em;
+  text-decoration: none;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.back-to-top-btn:hover {
+  background: #d49657;
+  color: #ffffff !important;
+}
+
+/* Content typography matching asdworld.com */
+.prose-custom p {
+  margin-bottom: 1.5rem;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #424242;
+}
+
+.prose-custom h1 {
+  font-size: 38px;
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.prose-custom h2 {
+  font-size: 28px;
+  line-height: 1.35;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.prose-custom h3 {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.prose-custom ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-custom ol {
+  list-style-type: decimal;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-custom li {
+  margin-bottom: 0.5rem;
+  font-size: 17px;
+}
+
+.prose-custom a {
+  color: #29aa6f;
+  text-decoration: underline;
+}
+
+.prose-custom a:hover {
+  color: #d49657;
+}
+
+.prose-custom blockquote {
+  border-left: 4px solid #29aa6f;
+  padding-left: 1.25rem;
+  font-style: italic;
+  color: #666666;
+  margin: 1.5rem 0;
+}

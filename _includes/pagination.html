@@ -1,0 +1,38 @@
+{% if paginator.total_pages > 1 %}
+  <nav class="flex items-center justify-center gap-1.5 pt-10 pb-6 font-sans text-sm" aria-label="Pagination">
+    <!-- Prev Page -->
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="px-3.5 py-2 border border-gray-300 text-gray-700 hover:bg-[#29aa6f] hover:text-white hover:border-[#29aa6f] transition-colors rounded-none" aria-label="Previous Page">
+        « Prev
+      </a>
+    {% endif %}
+
+    <!-- Page Numbers -->
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span class="px-3.5 py-2 bg-[#29aa6f] text-white font-bold border border-[#29aa6f]" aria-current="page">
+          {{ page }}
+        </span>
+      {% elsif page == 1 %}
+        <a href="{{ '/' | relative_url }}" class="px-3.5 py-2 border border-gray-300 text-gray-700 hover:bg-[#29aa6f] hover:text-white hover:border-[#29aa6f] transition-colors">
+          {{ page }}
+        </a>
+      {% elsif page <= 4 or page > paginator.total_pages | minus: 2 or page >= paginator.page | minus: 1 and page <= paginator.page | plus: 1 %}
+        <a href="{{ site.paginate_path | replace: ':num', page | relative_url }}" class="px-3.5 py-2 border border-gray-300 text-gray-700 hover:bg-[#29aa6f] hover:text-white hover:border-[#29aa6f] transition-colors">
+          {{ page }}
+        </a>
+      {% elsif page == 5 and paginator.page > 6 %}
+        <span class="px-2 py-2 text-gray-500">…</span>
+      {% elsif page == paginator.total_pages | minus: 2 and paginator.page < paginator.total_pages | minus: 3 %}
+        <span class="px-2 py-2 text-gray-500">…</span>
+      {% endif %}
+    {% endfor %}
+
+    <!-- Next Page -->
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}" class="px-3.5 py-2 border border-gray-300 text-gray-700 hover:bg-[#29aa6f] hover:text-white hover:border-[#29aa6f] transition-colors" aria-label="Next Page">
+        Next »
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}

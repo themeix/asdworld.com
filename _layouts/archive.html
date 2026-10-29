@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+    
+    <!-- Main Content Column (9 cols) -->
+    <div class="lg:col-span-9 lg:pr-8 lg:border-r lg:border-dotted lg:border-[#cccccc] min-w-0">
+      
+      <!-- Archive Title Banner -->
+      <div class="pb-6 mb-8 border-b border-[#e5e5e5]">
+        <h1 class="font-sans font-bold text-2xl sm:text-3xl text-[#333333]">
+          {{ page.title }}
+        </h1>
+      </div>
+
+      <!-- Filtered Posts -->
+      <div class="space-y-10">
+        {% assign matched_posts = site.posts %}
+        {% if page.category %}
+          {% assign matched_posts = site.posts | where_exp: "item", "item.categories contains page.category" %}
+        {% elsif page.tag %}
+          {% assign matched_posts = site.posts | where_exp: "item", "item.tags contains page.tag" %}
+        {% elsif page.year_month %}
+          {% assign matched_posts = site.posts | where_exp: "item", "item.date contains page.year_month" %}
+        {% endif %}
+
+        {% if matched_posts.size > 0 %}
+          {% for post in matched_posts %}
+            <article class="pb-8 border-b border-dotted border-[#cccccc]">
+              <h2 class="font-sans font-bold text-2xl text-[#333333] hover:text-[#29aa6f] leading-snug mb-2">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h2>
+
+              <div class="text-xs text-gray-500 mb-3 font-sans">
+                By <span class="text-gray-800">{{ post.author | default: "Rick Colosimo" }}</span> / {{ post.date | date: "%B %-d, %Y" }}
+              </div>
+
+              <div class="text-base text-[#424242] leading-relaxed mb-4 font-sans">
+                {{ post.excerpt | default: post.content | strip_html | truncatewords: 40 }}
+              </div>
+
+              <div class="text-right">
+                <a href="{{ post.url | relative_url }}" class="post-read-more-link" aria-label="Read more about {{ post.title }}">
+                  Read More
+                </a>
+              </div>
+            </article>
+          {% endfor %}
+        {% else %}
+          <p class="text-gray-600">No posts found in this archive.</p>
+        {% endif %}
+      </div>
+
+    </div>
+
+    <!-- Sidebar Column (3 cols) -->
+    <div class="lg:col-span-3 min-w-0">
+      {% include sidebar.html %}
+    </div>
+
+  </div>
+</div>

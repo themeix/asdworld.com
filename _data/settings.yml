@@ -1,0 +1,22 @@
+title: "ASD World"
+tagline: "Helping Parents Help Kids"
+description: "Helping Parents Help Kids - Musings, IEP guidance, and resources by Rick Colosimo"
+url: "https://themeix.github.io"
+baseurl: "/asdworld.com"
+author:
+  name: "Rick Colosimo"
+  email: "rick@thoughtstorm.com"
+  phone: "646.701.1080"
+  address: "P.O. Box 508, Ridgewood, NJ 07451"
+  twitter: "https://twitter.com/rickcolosimo"
+
+colors:
+  primary: "#29aa6f"
+  hover: "#d49657"
+  subtitle: "#3e7ada"
+  contact_bg: "#efd85f"
+  footer_bg: "#3e7ada"
+
+site_design: "Bright Bird Creative"
+site_design_url: "https://brightbirdcreative.com/"
+copyright: "© 2008 - 2026 RICK COLOSIMO. ALL RIGHTS RESERVED."

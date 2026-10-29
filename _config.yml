@@ -1,0 +1,32 @@
+title: "ASD World – Helping Parents Help Kids"
+email: "rick@thoughtstorm.com"
+description: "Helping Parents Help Kids - Musings, IEP guidance, and resources by Rick Colosimo"
+baseurl: "/asdworld.com"
+url: "https://themeix.github.io"
+
+paginate: 4
+paginate_path: "/page:num/"
+
+permalink: /:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - fetch_asdworld.py
+  - convert_asdworld.py
+  - _wp_data
+  - Gemfile
+  - Gemfile.lock
+  - README.md

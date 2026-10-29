@@ -1,0 +1,14 @@
+---
+layout: page
+title: "Disclosures"
+slug: disclosures
+permalink: /services-2/disclosures/
+---
+
+<p>There are a number of important formal disclosures of which you should be aware:</p>
+<p>No Representation: this website should not be construed as an attempt to create an attorney-client relationship between us, and until further notice, I will not, and may not, form an attorney-client relationship with anyone subject to New Jersey law on this issue. This fact is important to you because information you share with me in the absence of an attorney-client relationship may not be protected from discovery by someone else.</p>
+<p>No Confidential Communications: unless and until there is a signed engagement letter between us in place, you should not assume that communications with me will be subject to the attorney-client privilege or even a non-disclosure agreement. This is important to you because without these protections, you may be forced to reveal what you have said.</p>
+<p>Multiple Jurisdictions: because of the nature of my credentials, it is possible that the law of more than one state might apply to our relationship or to my representation of you, if in a legal capacity. This is important to you because if you are seeking to rely on a specific issue of NY or CA law, for example, we should discuss the actual law applicable to the situation so that you may better know what to expect.</p>
+<p><a href="https://www.irs.gov/pub/irs-pdf/pcir230.pdf">Circular 230</a> (pdf) disclaimer: The IRS has deemed it necessary to intrude on the attorney-client relationship and mandate certain disclosure language in written advice, including email messages. I find this utterly distasteful and completely inappropriate. (The IRS is certainly capable of writing appropriate bills to forward to Congress for legislative action to govern the extent to which taxpayers may use written advice to show a lack of intent to commit tax fraud.) I have been, and will continue, reviewing this matter more closely to determine to what extent I must/should include the Circular 230 notice in email messages. At this time, I have determined that it is unlikely that any of my advice will fall within the matters of concern to Cir. 230. In any event, you should expect that the disclaimer terms of Cir. 230 apply:</p>
+<blockquote><p>The information contained on this website, related blog posts, newsletters, and emails was not intended or written to be used, and it may not be used, for the purpose of avoiding tax penalties that may be imposed on the taxpayer.</p></blockquote>
+<p>In short, unless advice concerns abusive tax transactions or transactions where a &#8220;significant&#8221; purpose of the transaction is the avoidance or evasion of IRC taxes, it&#8217;s not really within the ambit of the Cir. 230. Needless to say, if you&#8217;re living on the bleeding edge of tax law, you should have competent counsel to work through these issues with you.</p>

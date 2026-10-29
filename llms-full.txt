@@ -1,0 +1,25 @@
+---
+layout: null
+---
+# ASD World - Complete LLM Index
+Title: {{ site.data.settings.title }}
+Tagline: {{ site.data.settings.tagline }}
+Description: {{ site.data.settings.description }}
+URL: {{ site.data.settings.url }}{{ site.data.settings.baseurl }}
+
+## Author Information
+Name: {{ site.data.settings.author.name }}
+Email: {{ site.data.settings.author.email }}
+Phone: {{ site.data.settings.author.phone }}
+Address: {{ site.data.settings.author.address }}
+
+## Complete Post Catalog
+{% for post in site.posts %}
+### {{ post.title }}
+- Date: {{ post.date | date: "%B %-d, %Y" }}
+- URL: {{ post.url | absolute_url }}
+- Categories: {{ post.categories | join: ", " }}
+- Tags: {{ post.tags | join: ", " }}
+- Excerpt: {{ post.excerpt | default: post.content | strip_html | truncatewords: 60 }}
+
+{% endfor %}

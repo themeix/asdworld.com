@@ -1,0 +1,36 @@
+columns:
+  - title: "Insurance & Consult"
+    links:
+      - title: "ASD Insurance"
+        url: "/asd-insurance/"
+      - title: "Consultations"
+        url: "/consultations/"
+
+  - title: "Services & IEP"
+    links:
+      - title: "Consultations"
+        url: "/consultations/"
+      - title: "Services"
+        url: "/services-2/"
+      - title: "I need IEP help!"
+        url: "/services-2/i-need-iep-help/"
+      - title: "Disclosures"
+        url: "/services-2/disclosures/"
+
+  - title: "About & FAQ"
+    links:
+      - title: "About"
+        url: "/about-rick-colosimo/"
+      - title: "My Approach"
+        url: "/about-rick-colosimo/my-approach/"
+      - title: "FAQ"
+        url: "/faq/"
+      - title: "Fees"
+        url: "/faq/fees/"
+
+  - title: "Connect"
+    links:
+      - title: "Contact"
+        url: "/contact-rick/"
+      - title: "Home"
+        url: "/"

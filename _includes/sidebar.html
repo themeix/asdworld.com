@@ -1,0 +1,49 @@
+<aside class="w-full space-y-8" aria-label="Sidebar">
+  <!-- Search Widget -->
+  <div class="widget">
+    <form action="{{ '/search/' | relative_url }}" method="get" role="search">
+      <input type="search" name="q" placeholder="Search" aria-label="Search" class="w-full px-5 py-3 bg-white border border-[#cccccc] text-[#6c6c6c] text-sm focus:border-[#29aa6f] focus:outline-none transition-colors" />
+    </form>
+  </div>
+
+  <!-- Twitter Follow Link -->
+  <div class="widget">
+    <a href="https://twitter.com/rickcolosimo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-base font-semibold text-[#29aa6f] hover:text-[#d49657] transition-colors">
+      <span>Follow Rick on Twitter →</span>
+    </a>
+  </div>
+
+  <!-- All Blog Posts Button Widget -->
+  <div class="widget">
+    <a href="{{ '/' | relative_url }}" class="sidebar-all-posts-btn group">
+      <span>All Blog Posts</span>
+      <img src="{{ '/assets/uploads/2019/12/arrow-thin-wide-white.png' | relative_url }}" alt="" width="36" height="18" class="transform group-hover:translate-x-1 transition-transform" />
+    </a>
+  </div>
+
+  <!-- Tags Cloud Widget -->
+  <div class="widget">
+    <h3 class="font-sans text-[20px] font-bold text-[#424242] pb-2 mb-4 border-b border-gray-200">
+      Tags
+    </h3>
+    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-2 leading-relaxed">
+      {% for tag in site.data.tags %}
+        {% assign count = tag.count %}
+        {% if count >= 10 %}
+          {% assign fsize = "text-[26px] font-bold" %}
+        {% elsif count >= 5 %}
+          {% assign fsize = "text-[21px] font-semibold" %}
+        {% elsif count >= 3 %}
+          {% assign fsize = "text-[17px] font-medium" %}
+        {% elsif count >= 2 %}
+          {% assign fsize = "text-[15px]" %}
+        {% else %}
+          {% assign fsize = "text-[13px]" %}
+        {% endif %}
+        <a href="{{ '/tag/' | append: tag.slug | append: '/' | relative_url }}" class="{{ fsize }} text-[#29aa6f] hover:text-[#d49657] hover:underline transition-colors" title="{{ tag.count }} posts">
+          {{ tag.name }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</aside>
