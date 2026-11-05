@@ -9,6 +9,23 @@ paginate_path: "/page/:num/"
 
 permalink: /:title/
 
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
 markdown: kramdown
 kramdown:
   input: GFM
