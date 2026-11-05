@@ -17,7 +17,7 @@ layout: default
 
             <!-- Post Meta: NO comment text as requested -->
             <div class="text-xs text-gray-500 mb-4 font-sans">
-              By <span class="text-gray-800 font-medium">{{ post.author | default: "Rick Colosimo" }}</span> / {{ post.date | date: "%B %-d, %Y" }}
+              By <a href="{{ '/author/rickcolosimo/' | relative_url }}" class="hover:underline font-medium text-black">{{ post.author | default: "Rick Colosimo" }}</a> / {{ post.date | date: "%B %-d, %Y" }}
             </div>
 
             <!-- Post Excerpt -->

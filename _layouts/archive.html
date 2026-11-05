@@ -16,24 +16,30 @@ layout: default
 
       <!-- Filtered Posts -->
       <div class="space-y-10">
-        {% assign matched_posts = site.posts %}
-        {% if page.category %}
-          {% assign matched_posts = site.posts | where_exp: "item", "item.categories contains page.category" %}
-        {% elsif page.tag %}
-          {% assign matched_posts = site.posts | where_exp: "item", "item.tags contains page.tag" %}
-        {% elsif page.year_month %}
-          {% assign matched_posts = site.posts | where_exp: "item", "item.date contains page.year_month" %}
-        {% endif %}
+        {% assign posts_to_show = page.posts %}
+        {% unless posts_to_show %}
+          {% assign matched_posts = site.posts %}
+          {% if page.category %}
+            {% assign matched_posts = site.posts | where_exp: "item", "item.categories contains page.category" %}
+          {% elsif page.tag %}
+            {% assign matched_posts = site.posts | where_exp: "item", "item.tags contains page.tag" %}
+          {% elsif page.author %}
+            {% assign matched_posts = site.posts %}
+          {% elsif page.year_month %}
+            {% assign matched_posts = site.posts | where_exp: "item", "item.date contains page.year_month" %}
+          {% endif %}
+          {% assign posts_to_show = matched_posts %}
+        {% endunless %}
 
-        {% if matched_posts.size > 0 %}
-          {% for post in matched_posts %}
+        {% if posts_to_show.size > 0 %}
+          {% for post in posts_to_show %}
             <article class="pb-8 border-b border-dotted border-[#cccccc]">
               <h2 class="font-sans font-bold text-2xl text-[#333333] hover:text-[#29aa6f] leading-snug mb-2">
                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
               </h2>
 
               <div class="text-xs text-gray-500 mb-3 font-sans">
-                By <span class="text-gray-800">{{ post.author | default: "Rick Colosimo" }}</span> / {{ post.date | date: "%B %-d, %Y" }}
+                By <a href="{{ '/author/rickcolosimo/' | relative_url }}" class="hover:underline font-medium text-black">{{ post.author | default: "Rick Colosimo" }}</a> / {{ post.date | date: "%B %-d, %Y" }}
               </div>
 
               <div class="text-base text-[#424242] leading-relaxed mb-4 font-sans">
@@ -52,6 +58,9 @@ layout: default
         {% endif %}
       </div>
 
+      <!-- Pagination -->
+      {% include pagination.html %}
+
     </div>
 
     <!-- Sidebar Column (3 cols) -->
@@ -61,3 +70,17 @@ layout: default
 
   </div>
 </div>
+
+<script>
+  // Backward compatibility: If an old link arrives with ?page=X, redirect to /page/X/
+  (function() {
+    if (window.location.search) {
+      var p = new URLSearchParams(window.location.search).get('page');
+      var num = parseInt(p, 10);
+      if (num && num > 1) {
+        var base = window.location.pathname.replace(/\/page\/\d+\/?$/, '').replace(/\/$/, '');
+        window.location.replace(base + '/page/' + num + '/');
+      }
+    }
+  })();
+</script>

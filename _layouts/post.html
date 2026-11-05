@@ -14,7 +14,7 @@ layout: default
 
       <!-- Post Meta: NO comment text as requested -->
       <div class="text-sm text-gray-500 mb-6 font-sans">
-        By <span class="text-gray-800 font-medium" itemprop="author">{{ page.author | default: "Rick Colosimo" }}</span> / <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
+        By <a href="{{ '/author/rickcolosimo/' | relative_url }}" class="hover:underline font-medium text-black" itemprop="author">{{ page.author | default: "Rick Colosimo" }}</a> / <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
       </div>
 
       <!-- Post Body Content -->
