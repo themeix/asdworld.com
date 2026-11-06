@@ -1,8 +1,8 @@
 title: "ASD World"
 tagline: "Helping Parents Help Kids"
 description: "Helping Parents Help Kids - Musings, IEP guidance, and resources by Rick Colosimo"
-url: "https://themeix.github.io"
-baseurl: "/asdworld.com"
+url: "https://asdworld.com"
+baseurl: ""
 author:
   name: "Rick Colosimo"
   email: "rick@thoughtstorm.com"

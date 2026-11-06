@@ -4,7 +4,7 @@
 ASD World provides comprehensive perspectives, guidance, and actionable insights on autism spectrum disorder (ASD), IEP meetings, special education strategy, employment models for adults on the spectrum, and insurance considerations.
 
 ## Core Pages
-- [Home]({{ '/ ' | absolute_url }}): Recent articles, blog posts, and educational guides.
+- [Home]({{ '/' | absolute_url }}): Recent articles, blog posts, and educational guides.
 - [ASD Insurance]({{ '/asd-insurance/' | absolute_url }}): Autism health insurance considerations and parent sharing.
 - [Consultations]({{ '/consultations/' | absolute_url }}): Advisory consultations and direct help for families.
 - [Services & IEP Guidance]({{ '/services-2/' | absolute_url }}): IEP preparation, strategy, and advocacy.

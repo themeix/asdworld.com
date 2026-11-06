@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://themeix.github.io/asdworld.com/sitemap.xml
+Sitemap: https://asdworld.com/sitemap.xml
